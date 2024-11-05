@@ -11,3 +11,5 @@ node_modules/
 **/frontend/generated/
 vite.generated.ts
 bundles/
+
+!.mise.toml
