@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.thowimmer</groupId>
-        <artifactId>vaadin-multi-module</artifactId>
+        <artifactId>parent</artifactId>
         <version>0.0.1</version>
     </parent>
 
