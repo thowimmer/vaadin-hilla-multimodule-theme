@@ -9,14 +9,14 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>app</artifactId>
+    <artifactId>application</artifactId>
 
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>presentation</artifactId>
+            <artifactId>adapter-in-presentation</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

@@ -10,8 +10,8 @@
 
     <packaging>pom</packaging>
     <modules>
-        <module>app</module>
-        <module>presentation</module>
+        <module>application</module>
+        <module>adapter-in-presentation</module>
         <module>services</module>
     </modules>
 

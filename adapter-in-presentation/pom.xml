@@ -9,7 +9,7 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>presentation</artifactId>
+    <artifactId>adapter-in-presentation</artifactId>
 
     <packaging>jar</packaging>
 
