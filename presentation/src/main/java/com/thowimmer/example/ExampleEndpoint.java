@@ -7,11 +7,13 @@ import com.vaadin.hilla.BrowserCallable;
 @AnonymousAllowed
 public class ExampleEndpoint {
 
-    private int counter = 0;
+    private final ExampleService service;
+
+    public ExampleEndpoint(ExampleService service) {
+        this.service = service;
+    }
 
     public int getCounter() {
-        int oldCounter = counter;
-        counter = oldCounter + 1;
-        return oldCounter;
+        return service.getCounter();
     }
 }

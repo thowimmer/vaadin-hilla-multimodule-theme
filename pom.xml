@@ -12,6 +12,7 @@
     <modules>
         <module>app</module>
         <module>presentation</module>
+        <module>services</module>
     </modules>
 
     <parent>
