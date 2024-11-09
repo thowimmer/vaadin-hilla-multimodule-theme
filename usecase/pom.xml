@@ -12,6 +12,13 @@
     <artifactId>usecase</artifactId>
 
     <dependencies>
+        <!-- Internal dependencies -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>port-in</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- External dependencies -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>

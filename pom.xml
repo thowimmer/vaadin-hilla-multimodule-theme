@@ -12,6 +12,7 @@
     <modules>
         <module>application</module>
         <module>adapter-in-presentation</module>
+        <module>port-in</module>
         <module>usecase</module>
     </modules>
 

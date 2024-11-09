@@ -1,5 +1,5 @@
 import {VerticalLayout} from "@vaadin/react-components";
-import {ExampleEndpoint} from "Frontend/generated/endpoints";
+import {Feature1Endpoint} from "Frontend/generated/endpoints";
 import {useEffect} from "react";
 import {useSignal} from "@vaadin/hilla-react-signals";
 
@@ -8,7 +8,7 @@ export default function TestView() {
     const counter = useSignal(0);
 
     async function getCounter() {
-        counter.value = await ExampleEndpoint.getCounter();
+        counter.value = await Feature1Endpoint.getCounter();
     }
 
     useEffect(() => {
