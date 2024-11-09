@@ -89,6 +89,9 @@
                     <systemPropertyVariables>
                         <hilla.mavenExecutable>${maven-executable}</hilla.mavenExecutable>
                     </systemPropertyVariables>
+                    <image>
+                        <name>${project.groupId}/library/${project.artifactId}</name>
+                    </image>
                 </configuration>
             </plugin>
             <plugin>
