@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.mc533.stocksimulator</groupId>
         <artifactId>parent</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>adapter-in-presentation</artifactId>
@@ -18,7 +18,6 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>port-in</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <!-- External dependencies -->
         <dependency>
@@ -32,7 +31,6 @@
             <plugin>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
-                <version>${vaadin.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -64,7 +62,6 @@
                     <plugin>
                         <groupId>com.vaadin</groupId>
                         <artifactId>vaadin-maven-plugin</artifactId>
-                        <version>${vaadin.version}</version>
                         <executions>
                             <execution>
                                 <goals>

@@ -6,7 +6,7 @@
 
     <groupId>com.mc533.stocksimulator</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <modules>
@@ -24,14 +24,39 @@
     </parent>
 
     <properties>
+        <!-- Dependency version properties -->
         <java.version>21</java.version>
         <vaadin.version>24.5.3</vaadin.version>
         <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
+        <!-- Build config properties -->
         <maven-executable>${maven.multiModuleProjectDirectory}/mvnw</maven-executable>
     </properties>
 
+    <!-- Global version management of dependencies -->
     <dependencyManagement>
         <dependencies>
+            <!-- Internal dependencies -->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>adapter-in-presentation</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>port-in</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>usecase</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- External dependencies -->
             <dependency>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-bom</artifactId>

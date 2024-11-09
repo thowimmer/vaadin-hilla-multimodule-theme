@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.mc533.stocksimulator</groupId>
         <artifactId>parent</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>application</artifactId>
@@ -18,17 +18,14 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>adapter-in-presentation</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>port-in</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>usecase</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <!-- External dependencies -->
         <dependency>
