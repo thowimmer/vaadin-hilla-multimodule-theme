@@ -1,0 +1,9 @@
+name: Production Build
+on: [push]
+jobs:
+  production-build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: git clean -fdx
+      - run: echo "${GITHUB_WORKSPACE}"
+      - run: ./mvnw clean package -Pproduction -X -Dhilla.mavenExecutable="${GITHUB_WORKSPACE}/mvnw"
