@@ -1,4 +1,4 @@
-package com.thowimmer.example;
+package com.mc533.stocksimulator;
 
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.theme.Theme;

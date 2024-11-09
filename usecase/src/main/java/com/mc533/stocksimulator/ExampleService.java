@@ -1,4 +1,4 @@
-package com.thowimmer.example;
+package com.mc533.stocksimulator;
 
 import org.springframework.stereotype.Component;
 
