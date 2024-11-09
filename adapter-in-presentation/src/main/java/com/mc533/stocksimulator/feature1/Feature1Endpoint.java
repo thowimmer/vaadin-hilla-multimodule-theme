@@ -9,11 +9,11 @@ public class Feature1Endpoint {
 
     private final Feature1InputPort inputPort;
 
-    public Feature1Endpoint(Feature1InputPort inputPort) {
+    Feature1Endpoint(Feature1InputPort inputPort) {
         this.inputPort = inputPort;
     }
 
-    public int getCounter() {
+    public int queryCounter() {
         return inputPort.queryCounter();
     }
 }
