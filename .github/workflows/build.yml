@@ -4,6 +4,14 @@ jobs:
   production-build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${GITHUB_WORKSPACE}/mvnw"
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '21'
+
       - run: cat "${GITHUB_WORKSPACE}/mvnw"
       - run: ./mvnw clean package -Pproduction -X -Dhilla.mavenExecutable="${GITHUB_WORKSPACE}/mvnw"
