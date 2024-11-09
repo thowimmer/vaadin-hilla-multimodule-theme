@@ -27,6 +27,14 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>usecase</artifactId>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>port-out</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>adapter-out-persistence-inmemory</artifactId>
+        </dependency>
         <!-- External dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -9,16 +9,12 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>usecase</artifactId>
+    <artifactId>adapter-out-persistence-inmemory</artifactId>
 
     <packaging>jar</packaging>
 
     <dependencies>
         <!-- Internal dependencies -->
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>port-in</artifactId>
-        </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>port-out</artifactId>

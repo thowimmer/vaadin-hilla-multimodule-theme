@@ -1,16 +1,19 @@
 package com.mc533.stocksimulator.feature1;
 
+import com.mc533.stocksimulator.shared.CounterRepository;
 import org.springframework.stereotype.Component;
 
 @Component
 class Feature1UseCase implements Feature1InputPort {
 
-    private int count = 0;
+    private final CounterRepository counterRepository;
+
+    Feature1UseCase(CounterRepository counterRepository) {
+        this.counterRepository = counterRepository;
+    }
 
     @Override
     public int queryCounter() {
-        int oldCounter = count;
-        count = oldCounter + 1;
-        return oldCounter;
+        return counterRepository.getCounter();
     }
 }
