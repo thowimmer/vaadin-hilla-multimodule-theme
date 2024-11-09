@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>services</artifactId>
+            <artifactId>usecase</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

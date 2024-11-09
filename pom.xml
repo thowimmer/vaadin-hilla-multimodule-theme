@@ -12,7 +12,7 @@
     <modules>
         <module>application</module>
         <module>adapter-in-presentation</module>
-        <module>services</module>
+        <module>usecase</module>
     </modules>
 
     <parent>
