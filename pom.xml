@@ -26,6 +26,8 @@
     <properties>
         <java.version>21</java.version>
         <vaadin.version>24.5.3</vaadin.version>
+        <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
+        <maven-executable>${maven.multiModuleProjectDirectory}/mvnw</maven-executable>
     </properties>
 
     <dependencyManagement>
@@ -47,8 +49,46 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <skip>true</skip>
+                    <systemPropertyVariables>
+                        <hilla.mavenExecutable>${maven-executable}</hilla.mavenExecutable>
+                    </systemPropertyVariables>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>${properties-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>set-system-properties</goal>
+                        </goals>
+                        <configuration>
+                            <properties>
+                                <property>
+                                    <name>hilla.mavenExecutable</name>
+                                    <value>${maven-executable}</value>
+                                </property>
+                            </properties>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>windows</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+            <properties>
+                <maven-executable>${maven.multiModuleProjectDirectory}/mvnw.cmd</maven-executable>
+            </properties>
+        </profile>
+    </profiles>
+
 </project>
