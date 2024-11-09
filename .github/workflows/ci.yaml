@@ -1,0 +1,20 @@
+name: stock-simulator-ci
+run-name: ${{ github.actor }} pushed a change
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Run the Maven verify phase
+        run: ./mvnw clean install -Pproduction
+      - run: mkdir result && cp application/target/*.jar result
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Package
+          path: result
