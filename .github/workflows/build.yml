@@ -4,5 +4,6 @@ jobs:
   production-build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${GITHUB_WORKSPACE}"
+      - run: echo "${GITHUB_WORKSPACE}/mvnw"
+      - run: cat "${GITHUB_WORKSPACE}/mvnw"
       - run: ./mvnw clean package -Pproduction -X -Dhilla.mavenExecutable="${GITHUB_WORKSPACE}/mvnw"
